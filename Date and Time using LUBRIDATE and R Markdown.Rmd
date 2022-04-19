@@ -1,0 +1,58 @@
+---
+title: "Using LUBRIDATE: For Time & Date in R"
+author: "Uma Negi"
+date: '2022-04-19'
+output:
+  html_document: default
+  pdf_document: default
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+Here we will see what packages of R are used to represent the Date and Time Data Type in R. So we will install and see some example
+
+Installing LUBRIDATE Package which deals with Date and Time in R
+
+##### Loading the Lubridate Package
+```{r}
+library(lubridate)
+```
+
+##### Using Today and Now function of Lubridate to know Today's Date and present Time
+```{r}
+today()                                  #shows today's date (Y-M-D)
+now()                                    #shows today time & date (Y-M-D H:M:S)
+```
+
+##### Converting from strings  to date format (YYYY-MM-DD)
+```{r}
+ymd("2022-04-19")
+mdy("April 19th, 2022")
+dmy("04-April-2022")
+ymd(20220419)
+```
+
+##### Creating Date-Time Components
+```{r}
+ymd_hms("2021-01-20 20:11:59")
+mdy_hm("01/20/2021 08:01")
+
+```
+
+##### Switching between existing Date-Time objects 
+```{r}
+as_date(now())           
+as_date("2021-01-20 08:01:00")           #only shows date component
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+
+
